@@ -14,9 +14,13 @@ Break a short video that worked into its hook, beats, and call to action, then r
 | **Cost** | Free to install. Each render uses credits on your Beatra account, and paid steps run only when you ask for that exact render or approve its card. |
 | **Works with** | Claude Code, Codex, OpenClaw |
 
+<p align="center"><img src="assets/hero.webp" width="800" alt="Four 9:16 beat frames (Hook, Demo, Benefits, CTA) remaking a hypothetical pain-first short structure for Brightfold, a fictional foldable desk lamp. AI-generated with Beatra."></p>
+
+*Four 9:16 beat frames (Hook, Demo, Benefits, CTA) remaking a hypothetical pain-first short structure for Brightfold, a fictional foldable desk lamp. AI-generated with Beatra.*
+
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.0 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.1 |
 
 This repository is published automatically from [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake). Report issues there.
 
@@ -41,6 +45,20 @@ Or paste this into your agent:
 
 ```text
 Install the viral-video-teardown-remake skill from https://github.com/beatra-ai/viral-video-remake-skill (folder skills/viral-video-teardown-remake), then follow its SKILL.md to connect my Beatra account.
+```
+
+## Examples
+
+<p align="center"><img src="assets/preview-1.webp" width="800" alt="Silent looping preview of the 6-second Brightfold remake clip, animated from the Hook beat frame. AI-generated with Beatra."></p>
+
+[▶ Watch the full video (MP4)](assets/full-1.mp4)
+
+*A 6-second vertical remake clip for the fictional lamp Brightfold: the Hook frame animated with the four-line narration covering hook, demo, benefits and call to action. AI-generated with Beatra.*
+
+Prompt:
+
+```text
+Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
 
 ## What you get

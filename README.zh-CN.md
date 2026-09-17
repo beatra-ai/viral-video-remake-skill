@@ -14,9 +14,13 @@
 | **费用** | 安装免费。每次生成消耗 Beatra 账号积分，只有你明确要求这次生成或批准确认卡后才会付费。 |
 | **支持的 Agent** | Claude Code、Codex、OpenClaw |
 
+<p align="center"><img src="assets/hero.webp" width="800" alt="按一个假设的“先讲痛点”短视频结构，为虚构的折叠台灯 Brightfold 重做的四张 9:16 分镜帧（钩子、演示、卖点、行动号召）。由 Beatra AI 生成。"></p>
+
+*按一个假设的“先讲痛点”短视频结构，为虚构的折叠台灯 Brightfold 重做的四张 9:16 分镜帧（钩子、演示、卖点、行动号召）。由 Beatra AI 生成。*
+
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.0 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.1 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake) 自动发布，问题请到那里反馈。
 
@@ -40,6 +44,20 @@ gh skill install beatra-ai/viral-video-remake-skill viral-video-teardown-remake
 
 ```text
 从 https://github.com/beatra-ai/viral-video-remake-skill 安装 viral-video-teardown-remake skill（目录 skills/viral-video-teardown-remake），然后按它的 SKILL.md 连接我的 Beatra 账号。
+```
+
+## 效果示例
+
+<p align="center"><img src="assets/preview-1.webp" width="800" alt="Brightfold 重做短片（6 秒）的无声循环预览，由钩子分镜帧生成动画。由 Beatra AI 生成。"></p>
+
+[▶ 观看完整视频（MP4）](assets/full-1.mp4)
+
+*虚构台灯 Brightfold 的 6 秒竖屏重做短片：钩子帧动起来，配四句旁白，依次讲钩子、演示、卖点和行动号召。由 Beatra AI 生成。*
+
+提示词：
+
+```text
+Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
 
 ## 你能得到什么
