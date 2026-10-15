@@ -20,7 +20,7 @@ Break a short video that worked into its hook, beats, and call to action, then r
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.4 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.8 |
 
 This repository is published automatically from [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake). Report issues there.
 
@@ -87,12 +87,12 @@ A beat table with second-level timings, the script pattern the clip follows, a r
 
 A shot list where the on-screen action and the spoken line are written as separate fields, generated frames for the beats you choose, and a narration track in a voice you select. For a short, low-cut reference that fits inside one model take, that becomes one 9:16 vertical clip animated from your opening frame with the narration running over it, and the other beat frames come back as stills for your own edit. For a reference with more cuts, or one that runs longer than a single take supports, you instead get segment sources for every beat, that same single narration track, captions, and a timecoded edit list to assemble in your own editor.
 
-## Updates
+## Updates and security
 
-Each installed skill checks for a new version at most once a day, verifies the
-official archive before replacing itself, and leaves your installation untouched
-if anything fails. Turn it off at any time — see
-`references/automatic-updates-and-safety.md` inside the skill.
+Since the 2026-10 release, this skill contains no self-updater: it runs only the
+files you installed and never replaces them on its own. Update it with the tool
+you installed it with — `npx skills update viral-video-teardown-remake` or `gh skill update viral-video-teardown-remake`.
+Details: `references/updates-and-security.md` inside the skill.
 
 ## License
 
