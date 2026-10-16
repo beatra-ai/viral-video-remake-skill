@@ -74,6 +74,15 @@ As of 2026-10-16. Live list: https://docs.beatra.ai/en/docs/models
 - **Video extension** — 7 models (wan2.7-i2v, wan3.0-video, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4; 1 with native audio
 - **Reference to video** — 9 models (wan2.7-r2v, minimax-h3, wan3.0-video, happyhorse-1.1-r2v, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 3:4, 4:3, 9:16, 21:9, 4:5, 5:4, 9:21; MOV, MP4; 2 with native audio
 
+## Why use Beatra instead of calling model APIs directly
+
+- **One account for every model this skill uses** — Text to image 10; Voice cloning 1; Text to speech 2; Video understanding 1; Image to video 9; First and last frames to video 8; Video extension 7; Reference to video 9 (as of 2026-10-16), behind one Beatra sign-in; no keys from individual model providers to manage.
+- **You decide what gets paid for** — Paid renders run only when you ask for that exact render or approve its card, which shows the live credit estimate.
+- **Direction before rendering** — the skill plans, directs, and reviews the work, then renders it on Beatra.
+- **Files you can verify** — every file under `skills/` matches the release archive on cdn.beatra.ai byte for byte, checked by SHA-256 before each push.
+- **Updates you control** — no self-updater; update with the tool you installed it with.
+- **Runs in your agent** — Claude Code, Codex, OpenClaw.
+
 ## How it compares
 
 | | Beatra (this skill) | [Clipcat-ai/clipcat-skill](https://github.com/Clipcat-ai/clipcat-skill) | [xianyu110/ecommerce-video-skills](https://github.com/xianyu110/ecommerce-video-skills) |
@@ -132,3 +141,4 @@ ClawHub.
 - Website — https://beatra.ai
 - Docs — https://docs.beatra.ai
 - Console — https://console.beatra.ai
+- For AI agents — https://beatra.ai/llms.txt (index) · https://beatra.ai/llms-full.txt (every skill in one file)
