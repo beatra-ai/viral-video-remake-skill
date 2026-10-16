@@ -20,7 +20,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.8 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.3.9 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake) 自动发布，问题请到那里反馈。
 
@@ -60,6 +60,33 @@ gh skill install beatra-ai/viral-video-remake-skill viral-video-teardown-remake
 Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
 
+## 规格
+
+截至 2026-10-16。实时列表：https://docs.beatra.ai/zh/docs/models
+
+- **文生图** — 10 个模型（Qwen Image 2.0 Fast、Qwen Image 3.0、Qwen Image 3.0 Pro、GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2、Wan Image 2.7 Fast、Qwen Image 2.0 Pro、Wan Image 2.7 Pro、MiniMax Image 01 Live）；单次最多 4 张；画布最多 16777216 像素
+- **声音克隆** — 1 个模型（MiniMax Voice Clone）
+- **语音合成** — 2 个模型（MiniMax Speech 2.8 HD、MiniMax Speech 2.8 Turbo）；FLAC、MP3、OPUS、PCM、WAV；40 种语言；最高 44.1 kHz；单次最多 50000 字符
+- **视频理解** — 1 个模型（MiniMax M3）
+- **图生视频** — 9 个模型（wan2.7-i2v、wan3.0-video、minimax-h3、seedance-2-mini、happyhorse-1.1-i2v、seedance-2-fast、seedance-2、wan3.0-video-prime、seedance-2.5）；480p 至 4K；2–30 秒；画幅 16:9、1:1、21:9、3:4、4:3、9:16；MOV、MP4；2 个带原生音频
+- **首尾帧生视频** — 8 个模型（wan2.7-i2v、wan3.0-video、minimax-h3、seedance-2-mini、seedance-2-fast、seedance-2、wan3.0-video-prime、seedance-2.5）；480p 至 4K；2–30 秒；画幅 16:9、1:1、21:9、3:4、4:3、9:16；MOV、MP4；2 个带原生音频
+- **视频延长** — 7 个模型（wan2.7-i2v、wan3.0-video、seedance-2-mini、seedance-2-fast、seedance-2、wan3.0-video-prime、seedance-2.5）；480p 至 4K；2–30 秒；画幅 16:9、1:1、21:9、3:4、4:3、9:16；MOV、MP4；1 个带原生音频
+- **参考生视频** — 9 个模型（wan2.7-r2v、minimax-h3、wan3.0-video、happyhorse-1.1-r2v、seedance-2-mini、seedance-2-fast、seedance-2、wan3.0-video-prime、seedance-2.5）；480p 至 4K；2–30 秒；画幅 16:9、1:1、3:4、4:3、9:16、21:9、4:5、5:4、9:21；MOV、MP4；2 个带原生音频
+
+## 与同类方案对比
+
+| | Beatra（本 skill） | [Clipcat-ai/clipcat-skill](https://github.com/Clipcat-ai/clipcat-skill) | [xianyu110/ecommerce-video-skills](https://github.com/xianyu110/ecommerce-video-skills) |
+| --- | --- | --- | --- |
+| 需要的账号或 key | 一个 Beatra 账号，不需要各家模型的 key | Clipcat 账号和 API key（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L47-L58)） | 不需要 API key；用 Python 和 ffmpeg 在本地渲染（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L41)） |
+| 模型 | 文生图 10；声音克隆 1；语音合成 2；视频理解 1；图生视频 9；首尾帧生视频 8；视频延长 7；参考生视频 9 | 视频：Grok Imagine 1.5、Veo 3.1 Fast、Gemini Omni Flash、Seedance 2/2.5、Wan 3.0、MiniMax H3、HappyHorse 1.1（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L108-L124)） | edge-tts 配音；图生视频模型可选（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L41)） |
+| 花钱前 | 只有你明确要求这次生成，或批准显示实时积分估算的确认卡后才会付费 | 视频任务扣积分前，先免费列出模型、时长和积分等清单，等你明确同意后才提交（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L82)） | 未说明 |
+| 支持的 Agent | Claude Code、Codex、OpenClaw | 能执行命令行的 Agent：Claude Code、Codex、WorkBuddy、OpenClaw、Cursor（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L5)） | Claude Code、Codex、Cursor（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L39)） |
+| 安装 | `npx skills add beatra-ai/viral-video-remake-skill` | 安装 `clipcat` 命令行；OpenClaw 按 skill 清单自动安装（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L19)） | `npx skills add xianyu110/ecommerce-video-skills`（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L30)） |
+| 许可证 | MIT-0 | 仓库里没有许可证文件（[出处](https://github.com/Clipcat-ai/clipcat-skill/tree/7888594dfb5fea29e40a50077d51a7dade97f66f)） | MIT（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/LICENSE)） |
+| 最近更新 | 随每次发布更新（v0.3.9） | 2026-09-20（[出处](https://github.com/Clipcat-ai/clipcat-skill/commit/7888594dfb5fea29e40a50077d51a7dade97f66f)） | 2026-10-05（[出处](https://github.com/xianyu110/ecommerce-video-skills/commit/96c49b349b7d975bda8f05ce6669c1d33500c269)） |
+
+事实核对于 2026-10-16。有误请到 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues) 提 issue。
+
 ## 你能得到什么
 
 - **拆的是结构，不是表面** — 按秒切出钩子、中段各功能段和转化引导，并判定它属于六类脚本结构里的哪一类。
@@ -95,3 +122,13 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 ## 许可证
 
 [MIT-0](LICENSE)：可自由使用、修改和再分发，包括商用，无需署名；与这些 skill 在 ClawHub 上的条款一致。
+
+## 相关链接
+
+- 官网 — https://www.beatra.cn
+- 文档 — https://docs.beatra.cn
+- 控制台 — https://console.beatra.cn
+
+- 微信小程序 — 国内用户微信扫码使用
+
+<img src="assets/beatra-mini-program-qr.jpg" alt="Beatra 微信小程序码" width="160">
