@@ -61,18 +61,33 @@ Prompt:
 Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
 
-## Specs
+## Technical Specifications & Output Limits
 
 As of 2026-10-16. Live list: https://docs.beatra.ai/en/docs/models
 
-- **Text to image** — 10 models (Qwen Image 2.0 Fast, Qwen Image 3.0, Qwen Image 3.0 Pro, GPT Image 2.5 Flare, GPT Image 2.5 Sunburst, GPT Image 2, Wan Image 2.7 Fast, Qwen Image 2.0 Pro, Wan Image 2.7 Pro, MiniMax Image 01 Live); up to 4 images per request; canvas up to 16777216 pixels
-- **Voice cloning** — 1 model (MiniMax Voice Clone)
-- **Text to speech** — 2 models (MiniMax Speech 2.8 HD, MiniMax Speech 2.8 Turbo); FLAC, MP3, OPUS, PCM, WAV; 40 languages; up to 44.1 kHz; up to 50000 characters per request
-- **Video understanding** — 1 model (MiniMax M3)
-- **Image to video** — 9 models (wan2.7-i2v, wan3.0-video, minimax-h3, seedance-2-mini, happyhorse-1.1-i2v, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4; 2 with native audio
-- **First and last frames to video** — 8 models (wan2.7-i2v, wan3.0-video, minimax-h3, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4; 2 with native audio
-- **Video extension** — 7 models (wan2.7-i2v, wan3.0-video, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4; 1 with native audio
-- **Reference to video** — 9 models (wan2.7-r2v, minimax-h3, wan3.0-video, happyhorse-1.1-r2v, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 3:4, 4:3, 9:16, 21:9, 4:5, 5:4, 9:21; MOV, MP4; 2 with native audio
+- **Uploads** — up to 100 MB per file; the per-model input limits below also apply
+- **Text to image** — 10 models (Qwen Image 2.0 Fast, Qwen Image 3.0, Qwen Image 3.0 Pro, GPT Image 2.5 Flare, GPT Image 2.5 Sunburst, GPT Image 2, Wan Image 2.7 Fast, Qwen Image 2.0 Pro, Wan Image 2.7 Pro, MiniMax Image 01 Live); PNG; up to 4 images per request; canvas up to 16.8 MP
+  - 16.8 MP (4K tier): Wan Image 2.7 Pro (up to 4 images per request); GPT Image 2.5 Flare, GPT Image 2.5 Sunburst, GPT Image 2 (1 image per request)
+- **Voice cloning** — 1 model (MiniMax Voice Clone); sample 10–300 s, up to 20 MB; consent attestation required
+- **Text to speech** — 2 models (MiniMax Speech 2.8 HD, MiniMax Speech 2.8 Turbo); FLAC, MP3, OPUS, PCM, WAV; 40 languages; sample rates 8, 16, 22.05, 24, 32, 44.1 kHz; up to 50000 characters per request
+  - Languages (ISO 639 codes): zh, yue, en, es, fr, ru, de, pt, ar, it, ja, ko, id, vi, tr, nl, uk, th, pl, ro, el, cs, fi, hi, bg, da, he, ms, fa, sk, sv, hr, fil, hu, no, sl, ca, nn, ta, af
+- **Video understanding** — 1 model (MiniMax M3); 1 file per request; up to 50 MB each; up to 360 s; sampled at 1 fps
+- **Image to video** — 9 models (wan2.7-i2v, wan3.0-video, minimax-h3, seedance-2-mini, happyhorse-1.1-i2v, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4
+  - 4K: seedance-2, up to 15 s
+  - 30 s: wan3.0-video, wan3.0-video-prime, seedance-2.5, up to 1080p
+  - Native audio: wan2.7-i2v, minimax-h3
+- **First and last frames to video** — 8 models (wan2.7-i2v, wan3.0-video, minimax-h3, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4
+  - 4K: seedance-2, up to 15 s
+  - 30 s: wan3.0-video, wan3.0-video-prime, seedance-2.5, up to 1080p
+  - Native audio: wan2.7-i2v, minimax-h3
+- **Video extension** — 7 models (wan2.7-i2v, wan3.0-video, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 21:9, 3:4, 4:3, 9:16; MOV, MP4
+  - 4K: seedance-2, up to 15 s
+  - 30 s: wan3.0-video, wan3.0-video-prime, seedance-2.5, up to 1080p
+  - Native audio: wan2.7-i2v
+- **Reference to video** — 9 models (wan2.7-r2v, minimax-h3, wan3.0-video, happyhorse-1.1-r2v, seedance-2-mini, seedance-2-fast, seedance-2, wan3.0-video-prime, seedance-2.5); 480p to 4K; 2–30 s; aspect ratios 16:9, 1:1, 3:4, 4:3, 9:16, 21:9, 4:5, 5:4, 9:21; MOV, MP4
+  - 4K: seedance-2, up to 15 s
+  - 30 s: wan3.0-video, wan3.0-video-prime, seedance-2.5, up to 1080p
+  - Native audio: wan2.7-r2v, minimax-h3
 
 ## Why use Beatra instead of calling model APIs directly
 
