@@ -1,6 +1,8 @@
 # Viral Video Remake Skill
 
-English | [简体中文](./README.zh-CN.md)
+English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md)
+
+> 👉 See also [AI Storyboard Generator Skill](https://github.com/beatra-ai/ai-storyboard-generator-skill)
 
 Break a short video that worked into its hook, beats, and call to action, then rebuild that structure around your own subject as a shot list, beat frames, and narration, delivered as one vertical clip or as segmented sources with captions and a timecoded edit list, from inside Claude Code, Cursor, Codex, Windsurf, Cline, or OpenClaw.
 
@@ -56,6 +58,12 @@ Install the viral-video-teardown-remake skill from https://github.com/beatra-ai/
 [▶ Watch the full video (MP4)](assets/full-1.mp4)
 
 *A 6-second vertical remake clip for the fictional lamp Brightfold: the Hook frame animated with the four-line narration covering hook, demo, benefits and call to action. AI-generated with Beatra.*
+
+Ask your agent:
+
+```text
+Break down this short video (link in ./reference.txt) into its hook, beats and call to action, then rebuild that structure for my foldable desk lamp Brightfold using ./brightfold.jpg: shot list, beat frames, narration, and a vertical clip.
+```
 
 Prompt:
 

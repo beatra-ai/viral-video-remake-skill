@@ -1,6 +1,8 @@
 # Viral Video Remake Skill
 
-[English](./README.md) | 简体中文
+[English](./README.md) | 简体中文 | [日本語](./README.ja.md)
+
+> 👉 也看看 [AI Storyboard Generator Skill](https://github.com/beatra-ai/ai-storyboard-generator-skill)
 
 把一条跑出来的短视频拆成钩子、中段和转化引导，再把这套结构套到你自己的选题上，出分镜表、分镜图和口播，交付一条竖屏短片，或分段素材加字幕和带时间码的剪辑清单，在 Claude Code、Cursor、Codex、Windsurf、Cline 或 OpenClaw 里直接完成。
 
@@ -54,6 +56,12 @@ gh skill install beatra-ai/viral-video-remake-skill viral-video-teardown-remake
 [▶ 观看完整视频（MP4）](assets/full-1.mp4)
 
 *虚构台灯 Brightfold 的 6 秒竖屏重做短片：钩子帧动起来，配四句旁白，依次讲钩子、演示、卖点和行动号召。由 Beatra AI 生成。*
+
+在你的 Agent 里这样说：
+
+```text
+把这条短视频（链接在 ./reference.txt）拆成开头钩子、中间节奏段和结尾 CTA，然后用 ./brightfold.jpg 把这个结构套到我的折叠台灯 Brightfold 上：分镜表、每段的关键画面、旁白，再出一条竖版短片。
+```
 
 提示词：
 
