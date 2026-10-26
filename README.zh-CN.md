@@ -23,7 +23,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.1 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.3 |
 
 本仓库由 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake) 自动发布，问题请到那里反馈。
 
@@ -116,7 +116,7 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 | 支持的 Agent | Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw | 能执行命令行的 Agent：Claude Code、Codex、WorkBuddy、OpenClaw、Cursor（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L5)） | Claude Code、Codex、Cursor（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L39)） |
 | 安装 | `npx skills add beatra-ai/viral-video-remake-skill` | 安装 `clipcat` 命令行；OpenClaw 按 skill 清单自动安装（[出处](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L19)） | `npx skills add xianyu110/ecommerce-video-skills`（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L30)） |
 | 许可证 | MIT-0 | 仓库里没有许可证文件（[出处](https://github.com/Clipcat-ai/clipcat-skill/tree/7888594dfb5fea29e40a50077d51a7dade97f66f)） | MIT（[出处](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/LICENSE)） |
-| 最近更新 | 随每次发布更新（v0.4.1） | 2026-09-20（[出处](https://github.com/Clipcat-ai/clipcat-skill/commit/7888594dfb5fea29e40a50077d51a7dade97f66f)） | 2026-10-05（[出处](https://github.com/xianyu110/ecommerce-video-skills/commit/96c49b349b7d975bda8f05ce6669c1d33500c269)） |
+| 最近更新 | 随每次发布更新（v0.4.3） | 2026-09-20（[出处](https://github.com/Clipcat-ai/clipcat-skill/commit/7888594dfb5fea29e40a50077d51a7dade97f66f)） | 2026-10-05（[出处](https://github.com/xianyu110/ecommerce-video-skills/commit/96c49b349b7d975bda8f05ce6669c1d33500c269)） |
 
 事实核对于 2026-10-16。有误请到 [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues) 提 issue。
 
@@ -161,7 +161,7 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 - 官网 — https://www.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - 文档 — https://docs.beatra.cn?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - 控制台 — https://console.beatra.cn
-- 给 AI Agent 读的说明 — https://www.beatra.cn/llms.txt（索引）· https://www.beatra.cn/llms-full.txt（全部 skill 合成一个文件）
+- 给 AI Agent 读的说明 — https://www.beatra.cn/llms.txt （索引）· https://www.beatra.cn/llms-full.txt （全部 skill 合成一个文件）
 
 - 微信小程序 — 国内用户微信扫码使用
 

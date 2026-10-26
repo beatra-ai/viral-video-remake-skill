@@ -23,7 +23,7 @@ Break a short video that worked into its hook, beats, and call to action, then r
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.1 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.3 |
 
 This repository is published automatically from [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake). Report issues there.
 
@@ -118,7 +118,7 @@ As of 2026-10-18. Live list: https://docs.beatra.ai/en/docs/models
 | Agents | Claude Code, Cursor, Codex, Windsurf, Cline, OpenClaw | Agents that run shell commands: Claude Code, Codex, WorkBuddy, OpenClaw, Cursor ([source](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L5)) | Claude Code, Codex, Cursor ([source](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L39)) |
 | Install | `npx skills add beatra-ai/viral-video-remake-skill` | The `clipcat` CLI; OpenClaw installs it from the skill manifest ([source](https://github.com/Clipcat-ai/clipcat-skill/blob/7888594dfb5fea29e40a50077d51a7dade97f66f/README.md#L19)) | `npx skills add xianyu110/ecommerce-video-skills` ([source](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/README.md#L30)) |
 | License | MIT-0 | No license file in the repository ([source](https://github.com/Clipcat-ai/clipcat-skill/tree/7888594dfb5fea29e40a50077d51a7dade97f66f)) | MIT ([source](https://github.com/xianyu110/ecommerce-video-skills/blob/96c49b349b7d975bda8f05ce6669c1d33500c269/LICENSE)) |
-| Last updated | Updated with every release (v0.4.1) | 2026-09-20 ([source](https://github.com/Clipcat-ai/clipcat-skill/commit/7888594dfb5fea29e40a50077d51a7dade97f66f)) | 2026-10-05 ([source](https://github.com/xianyu110/ecommerce-video-skills/commit/96c49b349b7d975bda8f05ce6669c1d33500c269)) |
+| Last updated | Updated with every release (v0.4.3) | 2026-09-20 ([source](https://github.com/Clipcat-ai/clipcat-skill/commit/7888594dfb5fea29e40a50077d51a7dade97f66f)) | 2026-10-05 ([source](https://github.com/xianyu110/ecommerce-video-skills/commit/96c49b349b7d975bda8f05ce6669c1d33500c269)) |
 
 Facts checked on 2026-10-16. Corrections: open an issue in [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/issues).
 

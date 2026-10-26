@@ -23,7 +23,7 @@
 
 | Skill | Entry point | Version |
 | --- | --- | --- |
-| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.1 |
+| [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.3 |
 
 このリポジトリは [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake) から自動的に公開されています。問題の報告はそちらへお願いします。
 
@@ -138,4 +138,4 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 - ウェブサイト — https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - ドキュメント — https://docs.beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - コンソール — https://console.beatra.ai
-- AI エージェント向け — https://beatra.ai/llms.txt（インデックス）· https://beatra.ai/llms-full.txt（全スキルを 1 ファイルに）
+- AI エージェント向け — https://beatra.ai/llms.txt （インデックス）· https://beatra.ai/llms-full.txt （全スキルを 1 ファイルに）
