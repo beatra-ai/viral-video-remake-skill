@@ -1,0 +1,20 @@
+{
+  "name": "viral-video-remake-skill",
+  "interface": {
+    "displayName": "Viral Video Remake"
+  },
+  "plugins": [
+    {
+      "name": "viral-video-teardown-remake",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "viral-video-teardown-remake",
+  "displayName": "Viral Video Remake",
+  "version": "0.4.3",
+  "description": "Paste the link or bring the file, break a short video that worked into its hook, beats, and call to action, then rebuild that structure around your own subject as a shot list, beat frames, and narration — delivered as one vertical clip animated from your opening frame, or, when the reference cuts too fast or runs too long for a single take, as segmented sources with captions and a timecoded edit list.",
+  "author": {
+    "name": "Beatra AI",
+    "url": "https://github.com/beatra-ai"
+  },
+  "homepage": "https://beatra.ai/skills/viral-video-teardown-remake",
+  "repository": "https://github.com/beatra-ai/viral-video-remake-skill",
+  "license": "MIT-0",
+  "icon": "./assets/icon.png"
+}

@@ -35,6 +35,33 @@
 npx skills add beatra-ai/viral-video-remake-skill
 ```
 
+Claude Code プラグインとして：
+
+```bash
+claude plugin marketplace add beatra-ai/viral-video-remake-skill
+claude plugin install viral-video-teardown-remake@viral-video-remake-skill
+```
+
+Codex プラグインとして：
+
+```bash
+codex plugin marketplace add beatra-ai/viral-video-remake-skill
+codex plugin add viral-video-teardown-remake@viral-video-remake-skill
+```
+
+GitHub Copilot CLI プラグインとして：
+
+```bash
+copilot plugin marketplace add beatra-ai/viral-video-remake-skill
+copilot plugin install viral-video-teardown-remake@viral-video-remake-skill
+```
+
+Gemini CLI 拡張機能として：
+
+```bash
+gemini extensions install https://github.com/beatra-ai/viral-video-remake-skill
+```
+
 GitHub CLI を使う場合：
 
 ```bash

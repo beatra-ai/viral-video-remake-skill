@@ -35,6 +35,33 @@ With the [`skills`](https://skills.sh) CLI:
 npx skills add beatra-ai/viral-video-remake-skill
 ```
 
+As a Claude Code plugin:
+
+```bash
+claude plugin marketplace add beatra-ai/viral-video-remake-skill
+claude plugin install viral-video-teardown-remake@viral-video-remake-skill
+```
+
+As a Codex plugin:
+
+```bash
+codex plugin marketplace add beatra-ai/viral-video-remake-skill
+codex plugin add viral-video-teardown-remake@viral-video-remake-skill
+```
+
+As a GitHub Copilot CLI plugin:
+
+```bash
+copilot plugin marketplace add beatra-ai/viral-video-remake-skill
+copilot plugin install viral-video-teardown-remake@viral-video-remake-skill
+```
+
+As a Gemini CLI extension:
+
+```bash
+gemini extensions install https://github.com/beatra-ai/viral-video-remake-skill
+```
+
 With the GitHub CLI:
 
 ```bash
