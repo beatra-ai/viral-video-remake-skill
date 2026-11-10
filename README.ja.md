@@ -62,6 +62,12 @@ Gemini CLI 拡張機能として：
 gemini extensions install https://github.com/beatra-ai/viral-video-remake-skill
 ```
 
+Antigravity CLI プラグインとして：
+
+```bash
+agy plugin install https://github.com/beatra-ai/viral-video-remake-skill
+```
+
 GitHub CLI を使う場合：
 
 ```bash
@@ -95,6 +101,19 @@ https://github.com/beatra-ai/viral-video-remake-skill から viral-video-teardow
 ```text
 Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
+
+## 入力と出力
+
+| | 種類 | 形式 | 仕様 |
+| --- | --- | --- | --- |
+| **入力** | テキスト：参考投稿のリンク、文字起こし、または説明と、あなたの版のテーマ | — | — |
+| **入力** | 動画：映像を読み取る参考動画ファイル（任意） | MP4、MOV、WEBM | 1 リクエストにつき 1 本／最長 360 秒／1 ファイル最大 50 MB |
+| **入力** | 画像：要所のスクリーンショット、またはカット画像に使う手持ちの素材 | JPG、PNG | — |
+| **入力** | 音声：自分の声でナレーションするためのサンプル（任意） | MP3、WAV | 10〜300 秒／1 ファイル最大 20 MB |
+| **出力** | テキスト：時間付きの展開表、台本の型、6観点の採点、映像とセリフを分けたカット表 | — | 編集可能 |
+| **出力** | 画像：展開ごとのカット画像 | PNG、JPG、WEBP | アスペクト比 9:16 |
+| **出力** | 音声：リメイク全体のナレーション音声1本 | MP3 | — |
+| **出力** | 動画：最初のカット画像から動かす縦型動画1本、または字幕とタイムコード付き編集リスト付きの分割クリップ | MP4 | アスペクト比 9:16 |
 
 ## 技術仕様と出力上限
 
@@ -138,17 +157,17 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ## よくある質問
 
-### 何を用意すればよいですか。
+### 何を用意すればよいですか？
 
 参考となるショート動画一本と、あなたが作りたいテーマを一言。参考は投稿のリンク、動画ファイル、要所のスクリーンショット、貼り付けたテキスト、展開の口頭説明のいずれでも構いません。
 
-### 分解では何が分かりますか。
+### 分解では何が分かりますか？
 
 秒単位の展開表、当てはまる構成パターン、寄与度順に並べた要因分析、そしてフックの強さ・情報密度・テンポ・被写体の見せ方・感情曲線・行動喚起の六指標評価です。最後に、あなたのリメイクが上回れる弱点も示します。
 
-### 最終的に何が手に入りますか。
+### 最終的に何が手に入りますか？
 
-映像と語りを別欄に書き分けた絵コンテ表、指定した展開のカット画像、選んだ声のナレーション音声までは共通です。カット数が少なく尺が単発生成の上限内に収まる場合は、冒頭カットを動かしナレーション全編を載せた9:16の縦型動画一本になり、ほかの展開のカット画像は静止画としてお渡しするので、ご自身の編集にそのままお使いいただけます。カットが多い、または尺が上限を超える場合は、展開ごとの分割素材、同じナレーション音声トラック、字幕、タイムコード付き編集リストをお渡しするので、ご自身の編集ソフトで組み立てられます。
+映像とセリフを別欄に書いた絵コンテ表、指定した展開のカット画像、選んだボイスのナレーション音声が届きます。参考動画が短くカットが少なければ、冒頭カットを動かしナレーション全編を載せた9:16の縦型動画1本になり、ほかのカット画像は画像のまま渡すので、ご自身の編集に使えます。参考動画が長い、またはカットが多い場合は、展開ごとのクリップ、同じナレーション音声、字幕、タイムコード付き編集リストを渡すので、ご自身の編集ソフトで組み立てられます。
 
 ## 更新とセキュリティ
 
@@ -158,7 +177,9 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ## ライセンス
 
-[MIT-0](LICENSE)：商用を含め、自由に使用・改変・再配布できます。クレジット表記は不要です。ClawHub 上のこれらのスキルと同じ条件です。
+このリポジトリのスキルファイル（`SKILL.md`、リファレンス、スクリプト）とこの README は [MIT-0](LICENSE) で提供しています。商用を含め、自由に使用・改変・再配布でき、クレジット表記は不要です。
+
+生成は Beatra のクラウドサービスで行われ、[Beatra 利用規約](https://beatra.ai/terms?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill)が適用されます。
 
 ## リンク
 

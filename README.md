@@ -62,6 +62,12 @@ As a Gemini CLI extension:
 gemini extensions install https://github.com/beatra-ai/viral-video-remake-skill
 ```
 
+As an Antigravity CLI plugin:
+
+```bash
+agy plugin install https://github.com/beatra-ai/viral-video-remake-skill
+```
+
 With the GitHub CLI:
 
 ```bash
@@ -97,6 +103,19 @@ Prompt:
 ```text
 Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
+
+## Inputs and outputs
+
+| | Type | Formats | Specifications |
+| --- | --- | --- | --- |
+| **Input** | Text — A link to the reference post, a transcript, or your own description, plus what your version is about | — | — |
+| **Input** | Video — Reference video file, read frame by frame (optional) | MP4, MOV, WEBM | 1 video per request; up to 360 s; up to 50 MB each |
+| **Input** | Image — Screenshots of key moments, or your own assets for the frames | JPG, PNG | — |
+| **Input** | Audio — A sample of your own voice to clone for the narration (optional) | MP3, WAV | 10–300 s; up to 20 MB each |
+| **Output** | Text — Beat table with timings, script pattern, six-dimension score, and a shot list with visuals and narration kept apart | — | editable |
+| **Output** | Image — Beat frames, delivered as images | PNG, JPG, WEBP | aspect ratios 9:16 |
+| **Output** | Audio — One narration track for the whole remake | MP3 | — |
+| **Output** | Video — One vertical clip animated from your opening frame, or segment clips with captions and a timecoded edit list | MP4 | aspect ratios 9:16 |
 
 ## Technical Specifications & Output Limits
 
@@ -169,11 +188,11 @@ A reference short and a sentence about what your version is about. The reference
 
 ### What does the teardown actually tell me?
 
-A beat table with second-level timings, the script pattern the clip follows, a ranked read of what carried its performance, a score across hook strength, information density, pacing, subject presentation, emotional curve, and conversion pull, and the one weakness your remake can improve on.
+A beat table with second-level timings, the script pattern the clip follows, a ranked list of what carried its performance, a score across hook strength, information density, pacing, subject presentation, emotional curve, and conversion pull, and the one weakness your remake can improve on.
 
 ### What do I get at the end?
 
-A shot list where the on-screen action and the spoken line are written as separate fields, generated frames for the beats you choose, and a narration track in a voice you select. For a short, low-cut reference that fits inside one model take, that becomes one 9:16 vertical clip animated from your opening frame with the narration running over it, and the other beat frames come back as stills for your own edit. For a reference with more cuts, or one that runs longer than a single take supports, you instead get segment sources for every beat, that same single narration track, captions, and a timecoded edit list to assemble in your own editor.
+A shot list with the on-screen action and the spoken line written apart, frames for the beats you choose, and a narration track in a voice you pick. A short reference with few cuts becomes one 9:16 vertical clip animated from your opening frame with the narration over it, and the other frames come back as images for your own edit. A longer reference, or one with more cuts, comes back as a clip for every beat, the same narration track, captions, and a timecoded edit list to assemble in your editor.
 
 ## Updates and security
 
@@ -184,9 +203,10 @@ Details: `references/updates-and-security.md` inside the skill.
 
 ## License
 
-[MIT-0](LICENSE) — free to use, modify, and redistribute, including
-commercially. No attribution required. Same terms as these skills carry on
-ClawHub.
+The skill files in this repository (`SKILL.md`, references, and scripts) and this README are licensed under
+[MIT-0](LICENSE): free to use, modify, and redistribute, including commercially, with no attribution required.
+
+Media generation runs on Beatra's cloud service under the [Beatra Terms of Service](https://beatra.ai/terms?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill).
 
 ## Links
 

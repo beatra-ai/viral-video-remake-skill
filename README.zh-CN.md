@@ -62,6 +62,12 @@ copilot plugin install viral-video-teardown-remake@viral-video-remake-skill
 gemini extensions install https://github.com/beatra-ai/viral-video-remake-skill
 ```
 
+作为 Antigravity CLI 插件：
+
+```bash
+agy plugin install https://github.com/beatra-ai/viral-video-remake-skill
+```
+
 使用 GitHub CLI：
 
 ```bash
@@ -95,6 +101,19 @@ gh skill install beatra-ai/viral-video-remake-skill viral-video-teardown-remake
 ```text
 Evening on a cramped desk. The folded sage-green desk lamp in the foreground slowly unfolds on its own: its single flat arm rises from the round base, the long flat light bar lifts open at the small brass hinge, and the light bar switches on with a warm white glow that brightens the desk. Slow gentle camera push-in toward the lamp. The laptop, papers, mug and plant stay still. Smooth, realistic product-video motion.
 ```
+
+## 输入与输出
+
+| | 类型 | 格式 | 规格 |
+| --- | --- | --- | --- |
+| **输入** | 文本：参考帖子的链接、文字稿或你的描述，以及你要做的主题 | — | — |
+| **输入** | 视频：参考视频文件，逐帧读取画面（可选） | MP4、MOV、WEBM | 单次 1 段；最长 360 秒；单个文件最大 50 MB |
+| **输入** | 图片：关键画面截图，或用来做分镜帧的你自己的素材 | JPG、PNG | — |
+| **输入** | 音频：用于克隆你自己声音的样本（可选） | MP3、WAV | 10–300 秒；单个文件最大 20 MB |
+| **输出** | 文本：带时间的分段表、脚本套路、六维评分，以及画面和口播分开写的分镜表 | — | 可编辑 |
+| **输出** | 图片：分镜帧，以图片交付 | PNG、JPG、WEBP | 画幅 9:16 |
+| **输出** | 音频：整条复刻视频的一条口播音轨 | MP3 | — |
+| **输出** | 视频：从开场帧动起来的一条竖屏视频，或分段视频片段加字幕和带时间码的剪辑清单 | MP4 | 画幅 9:16 |
 
 ## 技术规格与输出限制
 
@@ -171,7 +190,7 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ### 最后我拿到什么？
 
-一份画面和口播分开写的分镜表、你选定段落的分镜图，以及自选音色的口播音轨。参考视频镜头简单、时长在单条模型上限内，就交付一条由开场画面动起来、配好整段口播的 9:16 竖屏短片，其余段落的分镜图按静帧交付，方便你剪进自己的版本；参考视频卡点更多，或时长超过单条模型上限，就改为交付每一段的分镜素材、同一条完整口播音轨、字幕，以及带时间码的剪辑清单，供你在自己的编辑软件里拼接。
+一份画面和口播分开写的分镜表、你挑的段落的分镜图，以及你选的音色读的口播音轨。参考视频短、镜头少，就交付一条由开场画面动起来、配好整段口播的 9:16 竖屏短片，其余分镜图作为图片交付，方便你剪进自己的版本；参考视频更长或卡点更多，就交付每一段的视频片段、同一条完整口播音轨、字幕和带时间码的剪辑清单，在你自己的剪辑软件里拼接。
 
 ## 更新与安全
 
@@ -181,7 +200,9 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ## 许可证
 
-[MIT-0](LICENSE)：可自由使用、修改和再分发，包括商用，无需署名；与这些 skill 在 ClawHub 上的条款一致。
+本仓库的 Skill 文件（`SKILL.md`、参考文档和脚本）与本 README 采用 [MIT-0](LICENSE) 许可：可自由使用、修改和再分发，包括商用，无需署名。
+
+内容生成在 Beatra 云端完成，适用 [Beatra 服务条款](https://www.beatra.cn/terms?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill)。
 
 ## 相关链接
 

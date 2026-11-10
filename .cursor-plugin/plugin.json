@@ -9,5 +9,22 @@
   "homepage": "https://beatra.ai/skills/viral-video-teardown-remake",
   "repository": "https://github.com/beatra-ai/viral-video-remake-skill",
   "license": "MIT-0",
+  "keywords": [
+    "viral video teardown",
+    "short video remake",
+    "viral video breakdown",
+    "recreate a viral video",
+    "competitor video analysis",
+    "video hook analysis",
+    "short form video script generator",
+    "TikTok viral video analysis",
+    "video shot list generator",
+    "storyboard from a reference video",
+    "benchmark video rebuild",
+    "short video remake with voiceover",
+    "analyze a video from its link",
+    "video comment analysis",
+    "YouTube transcript to script"
+  ],
   "logo": "assets/icon.png"
 }
