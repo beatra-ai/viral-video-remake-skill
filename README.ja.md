@@ -12,7 +12,7 @@
 | 項目 | 内容 |
 | --- | --- |
 | **できること** | リンクを貼るか手元の素材を渡すだけ。伸びたショート動画を冒頭フック・本編・締めへ分解し、その構成を自分のテーマに移して、絵コンテ・カット画像・ナレーションまで作ります。カット数が少なく尺がモデルの単発生成上限内に収まれば冒頭カットを動かした縦型動画一本、カットが多い、または尺が上限を超える場合はタイムコード付き編集リストを添えた分割済み素材でお渡しします。 |
-| **モデル** | Qwen Image 2.0 Fast、Qwen Image 3.0、Qwen Image 3.0 Pro、GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2、Wan Image 2.7 Fast、Qwen Image 2.0 Pro、Wan Image 2.7 Pro、MiniMax Image 01 Live、MiniMax Voice Clone、MiniMax Speech 2.8 HD、MiniMax Speech 2.8 Turbo、MiniMax M3、Wan 2.7、Wan 3.0 Video、MiniMax H3、Seedance 2.0 Mini、HappyHorse 1.1、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5 |
+| **モデル** | Qwen Image 3.0、MiniMax H3 Image、Qwen Image 2.0 Fast、Qwen Image 3.0 Pro、GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2、Wan Image 2.7 Fast、Qwen Image 2.0 Pro、Wan Image 2.7 Pro、MiniMax Voice Clone、MiniMax Speech 2.8 HD、MiniMax Speech 2.8 Turbo、Doubao Seed TTS 2.0、ElevenLabs v4 Turbo、ElevenLabs v4、MiniMax M3、Wan 3.0 Video、Wan 2.7、MiniMax H3、Seedance 2.0 Mini、HappyHorse 1.1、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5 |
 | **動作要件** | Python 3.10 以上と、`SKILL.md` を読み込めるエージェント |
 | **費用** | インストールは無料。生成のたびに Beatra アカウントのクレジットを消費しますが、課金されるのは、その生成を明示的に依頼したとき、または確認カードを承認したときだけです。 |
 | **対応エージェント** | Claude Code、Cursor、Codex、Windsurf、Cline、OpenClaw |
@@ -26,6 +26,8 @@
 | [`viral-video-teardown-remake`](skills/viral-video-teardown-remake) | [SKILL.md](skills/viral-video-teardown-remake/SKILL.md) | 0.4.3 |
 
 このリポジトリは [beatra-ai/beatra-skills](https://github.com/beatra-ai/beatra-skills/tree/main/skills/viral-video-teardown-remake) から自動的に公開されています。問題の報告はそちらへお願いします。
+
+このスキルは `viral-video-remake` としても知られています（インストール名：`viral-video-teardown-remake`）。
 
 ## インストール
 
@@ -82,6 +84,8 @@ gh skill install beatra-ai/viral-video-remake-skill viral-video-teardown-remake
 https://github.com/beatra-ai/viral-video-remake-skill から viral-video-teardown-remake スキル（フォルダ skills/viral-video-teardown-remake）をインストールし、その SKILL.md に従って私の Beatra アカウントに接続してください。
 ```
 
+クリーン環境で動作確認済み：Antigravity CLI (2026-11-09)。
+
 ## 作例
 
 <p align="center"><img src="assets/preview-1.webp" width="800" alt="Hook のビートフレームから動かした 6 秒の Brightfold リメイククリップの無音ループプレビュー。Beatra AI で生成。"></p>
@@ -117,20 +121,20 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ## 技術仕様と出力上限
 
-2026-10-18 時点。最新の一覧：https://docs.beatra.ai/ja/docs/models
+2026-11-14 時点。最新の一覧：https://docs.beatra.ai/ja/docs/models
 
 - **アップロード** — 1 ファイルあたり最大 100 MB。下記の各モデルの入力制限も適用されます
-- **テキストから画像** — 10 モデル（Qwen Image 2.0 Fast、Qwen Image 3.0、Qwen Image 3.0 Pro、GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2、Wan Image 2.7 Fast、Qwen Image 2.0 Pro、Wan Image 2.7 Pro、MiniMax Image 01 Live）／PNG／1 リクエストあたり最大 4 枚／キャンバス最大 16.8 MP
-  - 16.8 MP（4K ティア）：Wan Image 2.7 Pro（1 リクエストあたり最大 4 枚）／GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2（1 リクエストにつき 1 枚）
+- **テキストから画像** — 10 モデル（Qwen Image 3.0、MiniMax H3 Image、Qwen Image 2.0 Fast、Qwen Image 3.0 Pro、GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2、Wan Image 2.7 Fast、Qwen Image 2.0 Pro、Wan Image 2.7 Pro）／PNG／1 リクエストあたり最大 4 枚／キャンバス最大 16.8 MP
+  - 16.8 MP（4K ティア）：MiniMax H3 Image、Wan Image 2.7 Pro（1 リクエストあたり最大 4 枚）／GPT Image 2.5 Flare、GPT Image 2.5 Sunburst、GPT Image 2（1 リクエストにつき 1 枚）
 - **ボイスクローン** — 1 モデル（MiniMax Voice Clone）／サンプル 10〜300 秒、最大 20 MB／本人の同意確認が必要
-- **音声合成** — 2 モデル（MiniMax Speech 2.8 HD、MiniMax Speech 2.8 Turbo）／FLAC、MP3、OPUS、PCM、WAV／40 言語／サンプルレート 8、16、22.05、24、32、44.1 kHz／1 リクエストあたり最大 50000 文字
+- **音声合成** — 5 モデル（MiniMax Speech 2.8 HD、MiniMax Speech 2.8 Turbo、Doubao Seed TTS 2.0、ElevenLabs v4 Turbo、ElevenLabs v4）／FLAC、MP3、OPUS、PCM、WAV／40 言語／サンプルレート 8、16、22.05、24、32、44.1 kHz／1 リクエストあたり最大 50000 文字
   - 言語（ISO 639 コード）：zh, yue, en, es, fr, ru, de, pt, ar, it, ja, ko, id, vi, tr, nl, uk, th, pl, ro, el, cs, fi, hi, bg, da, he, ms, fa, sk, sv, hr, fil, hu, no, sl, ca, nn, ta, af
 - **動画理解** — 1 モデル（MiniMax M3）／1 リクエストにつき 1 ファイル／各最大 50 MB／最長 360 秒／1 fps でサンプリング
-- **画像から動画** — 9 モデル（Wan 2.7、Wan 3.0 Video、MiniMax H3、Seedance 2.0 Mini、HappyHorse 1.1、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、21:9、3:4、4:3、9:16／MOV、MP4
+- **画像から動画** — 9 モデル（Wan 3.0 Video、Wan 2.7、MiniMax H3、Seedance 2.0 Mini、HappyHorse 1.1、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、21:9、3:4、4:3、9:16／MOV、MP4
   - 4K：Seedance 2.0、最長 15 秒
   - 30 秒：Wan 3.0 Video、Wan 3.0 Video Prime、Seedance 2.5、最高 1080p
   - ネイティブ音声：Wan 2.7、MiniMax H3
-- **最初と最後のフレームから動画** — 8 モデル（Wan 2.7、Wan 3.0 Video、MiniMax H3、Seedance 2.0 Mini、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、21:9、3:4、4:3、9:16／MOV、MP4
+- **最初と最後のフレームから動画** — 8 モデル（Wan 3.0 Video、Wan 2.7、MiniMax H3、Seedance 2.0 Mini、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、21:9、3:4、4:3、9:16／MOV、MP4
   - 4K：Seedance 2.0、最長 15 秒
   - 30 秒：Wan 3.0 Video、Wan 3.0 Video Prime、Seedance 2.5、最高 1080p
   - ネイティブ音声：Wan 2.7、MiniMax H3
@@ -138,7 +142,7 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
   - 4K：Seedance 2.0、最長 15 秒
   - 30 秒：Wan 3.0 Video、Wan 3.0 Video Prime、Seedance 2.5、最高 1080p
   - ネイティブ音声：Wan 2.7
-- **参照素材から動画** — 9 モデル（Wan 2.7、MiniMax H3、Wan 3.0 Video、HappyHorse 1.1、Seedance 2.0 Mini、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、3:4、4:3、9:16、21:9、4:5、5:4、9:21／MOV、MP4
+- **参照素材から動画** — 9 モデル（Wan 3.0 Video、Wan 2.7、MiniMax H3、HappyHorse 1.1、Seedance 2.0 Mini、Seedance 2.0 Fast、Seedance 2.0、Wan 3.0 Video Prime、Seedance 2.5）／480p〜4K／2〜30 秒／アスペクト比 16:9、1:1、3:4、4:3、9:16、21:9、4:5、5:4、9:21／MOV、MP4
   - 4K：Seedance 2.0、最長 15 秒
   - 30 秒：Wan 3.0 Video、Wan 3.0 Video Prime、Seedance 2.5、最高 1080p
   - ネイティブ音声：Wan 2.7、MiniMax H3
@@ -183,6 +187,7 @@ Evening on a cramped desk. The folded sage-green desk lamp in the foreground slo
 
 ## リンク
 
+- スキルページ — https://beatra.ai/skills/viral-video-teardown-remake?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - ウェブサイト — https://beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - ドキュメント — https://docs.beatra.ai?utm_source=github&utm_medium=flagship&utm_campaign=viral-video-remake-skill
 - コンソール — https://console.beatra.ai
